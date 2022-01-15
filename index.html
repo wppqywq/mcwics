@@ -18,15 +18,37 @@
     <section>
         <div class="container">
             <h1 class="title">Recipe Converter</h1>
-            <form class="form" action="Number to convert">
-                <p>
-                    <label for="numberToConvert">Enter a number:</label>
-                    <input id="numberToConvert" type="number" placeholder="Enter a number here">
+            <h2 class="intro">Enter the ingredients on the recipe:</h2>
+            <form class="form" action="" method="get">
+                <div>
+                    <label for="numberToConvert">Enter the quantity:</label>
+                    <input id="numberToConvert" type="number" placeholder="400" required>
 
-                </p>
-                <p>
-                    <label for="unit">Choose a unit: </label>
+                </div>
+
+
+                <div>
+                    <label for="unit">Choose a unit (not required):</label>
                     <select name="unit" id="unit">
+                        <option value="mL">ml</option>
+                        <option value="L">L</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ingredient">Enter the ingredient:</label>
+                    <input id="ingredient" type="text" placeholder="milk" required>
+                </div>
+
+
+                <div>
+                    <button class="btn btn-outline-primary submit">Submit</button>
+                </div>
+
+                <div>
+                    <label for="convertFrom">Choose a unit: </label>
+                    <select name="convertFrom" id="unit">
                         <option value="Gallon">Gallons</option>
                         <option value="Centiliters">Centiliters</option>
                         <option value="Liters">Liters</option>
@@ -35,22 +57,17 @@
                         <option value="Fahrenheit">Fahrenheit</option>
                         <option value="Celsius">Celsius</option>
                     </select>
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label for="convertTo">Convert to:</label>
-                    <select name="unit" id="unit">
+                    <select name="convertFrom" id="unit">
                         <option value="Gallon">Gallon</option>
                         <option value="Kilograms">Kilograms</option>
                         <option value="Grams">Grams</option>
-
                     </select>
-                </p>
-
-                <p>
-                    <button class="btn btn-outline-primary submit">Submit</button>
-                </p>
-
+                    <h2 id="result"></label>
+                </div>
             </form>
         </div>
     </section>
