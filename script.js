@@ -11,7 +11,7 @@ $('document').ready(function () {
         <option value="kg">kg</option>\
         <option value="lb">lb</option>\
         </select></div></td><td>\
-        <div><input name="ingredient" id="ingredient" type="text" ></div> \
+        <div><input id="ingredientData" name="ingredient" id="ingredient" type="text" ></div> \
         </td><td>convert to <select name="convertedUnit" id="convertedUnit">\
         <option value="N/A">N/A</option>\
         <option value="mL">mL</option>\
@@ -95,7 +95,7 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity * 1000;
             } else if (preUnit == 'oz') {
                 return quantity * ozInG;
-            } else if (preUnit == 'lb'){
+            } else if (preUnit == 'lb') {
                 return quantity * lbInG;
             }
         case 'kg':
@@ -107,7 +107,7 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity;
             } else if (preUnit == 'oz') {
                 return quantity * ozInG / 1000;
-            } else if(preUnit == 'lb'){
+            } else if (preUnit == 'lb') {
                 return quantity * lbInG / 1000;
             }
         case "lb":
@@ -119,7 +119,7 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity * 1000 / lbInG;
             } else if (preUnit == 'oz') {
                 return quantity / lbInOz;
-            } else if(preUnit == 'lb'){
+            } else if (preUnit == 'lb') {
                 return quantity;
             }
         case 'oz':
@@ -129,7 +129,7 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity / ozInG;
             } else if (preUnit == 'kg') {
                 return quantity * 1000 / ozInG;
-            } else if(preUnit == 'lb'){
+            } else if (preUnit == 'lb') {
                 return quantity * lbInOz;
             } else if (preUnit == 'oz') {
                 return quantity;

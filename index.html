@@ -29,10 +29,10 @@
     <section class="row justify-content-evenly">
         <section class="col-lg-4" id="left-content">
             <div>
-                <h1 class="title">Recipe Converter</h1>
+                <h1 class="title">Serving Size Converter</h1>
                 <p id="introduction">
-                    This page helps you convert the servings of your recipe to the servings you need!
-                    <br>Simply enter the ingredients on the recipe below:
+                    This page helps you convert the serving sizes of your recipe to the serving sizes you need!
+                    <br>Simply enter the ingredients below:
                 </p>
                 <form id="ingredient" action="" method="GET">
 
@@ -61,7 +61,8 @@
 
                             <td>
                                 <div>
-                                    <input name="ingredient" type="text" placeholder="milk" required>
+                                    <input id="ingredientData" name="ingredient" type="text" placeholder="milk"
+                                        required>
                                 </div>
                             </td>
 
@@ -103,7 +104,7 @@
 
                             <td>
                                 <div>
-                                    <input name="ingredient" type="text" placeholder="eggs">
+                                    <input id="ingredientData" name="ingredient" type="text" placeholder="eggs">
                                 </div>
                             </td>
 

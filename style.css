@@ -26,7 +26,7 @@ p{
     border-style:hidden;
     border-collapse:separate; 
     width:450px;
-    border-spacing:2px 5px;
+    border-spacing:2px 2px;
     margin: 6px;
     border-radius: 10px;
     font-size: 14px;
@@ -35,7 +35,7 @@ p{
 #left-content {
     background-color: #c6d5ff;
     border-radius: 10px;
-    padding: 15px 25px;
+    padding: 15px 20px;
     display: flex;
     width: 500px;
     flex-direction: column;
@@ -65,22 +65,27 @@ p{
     float:right;
 }
 */
+
+#ingredientData{
+    width: 80px;
+}
+
 input{
     background-color:#ffe6f4;
     border-style:hidden;
     width:50px;
-    border-spacing:1px 5px;
+    border-spacing:1px 2px;
     margin: 5px;
     border-radius: 12px;
 }
+
 #resultTbl{
     background:#ffe6f4;
     border-style:hidden;
     border-collapse:separate; 
-    border-spacing:2px 5px;
-    width:400px;
+    width:450px;
+    border-spacing:2px 2px;
     margin: 6px;
-    display:flexbox;
     border-radius: 10px;
     font-size: 20px;
 }
