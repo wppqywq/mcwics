@@ -32,3 +32,7 @@ addForm.addEventListener('submit', function (e) {
 
 
 });
+
+function deleteResult() {
+    document.querySelector("#resultTable").innerHTML = "";
+}
