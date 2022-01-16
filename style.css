@@ -33,6 +33,16 @@ p{
     font-size: 14px;
 }
 
+#resultTbl{
+    border-style:hidden;
+    border-collapse:separate; 
+    width:400px;
+    border-spacing:2px 5px;
+    margin: 6px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
 #left-content {
     background-color: #efca08;
     border-radius: 10px;
@@ -65,7 +75,7 @@ p{
 }
 */
 input{
-    background-color:#f49f0a;
+    /*background-color:#f49f0a;*/
     border-style:hidden;
     width:50px;
     border-spacing:1px 5px;
