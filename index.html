@@ -20,28 +20,45 @@
 
 </head>
 
-<body>
-    <section>
-        <div class="container">
-            <h1 class="title">Recipe Converter</h1>
-            <p id="introduction">
-                This page helps you convert the servings of your recipe to the servings you need!
-                <br>Simply enter the ingredients on the recipe below:
-            </p>
-            <form id="ingredient" action="" method="GET">
+<body class="container-fluid px-0">
+    <section class="row justify-content-evenly">
+        <section class="col-lg-4" id="left-content">
+            <div>
+                <h1 class="title">Recipe Converter</h1>
+                <p id="introduction">
+                    This page helps you convert the servings of your recipe to the servings you need!
+                    <br>Simply enter the ingredients on the recipe below:
+                </p>
+                <form id="ingredient" action="" method="GET">
 
 
-                <table id="tbl">
-                    <tr>
-                        <td id="rowTag">Ingredient:</td>
+                    <table id="tbl">
+                        <tr>
+                            <td id="rowTag">Ingredient:</td>
 
-                        <td>
-                            <input name="numberToConvert" type="number" placeholder="400" required>
-                        </td>
+                            <td>
+                                <input name="numberToConvert" type="number" placeholder="400" required>
+                            </td>
 
-                        <td>
-                            <div>
-                                <select name="originalUnit" id="originalUnit">
+                            <td>
+                                <div>
+                                    <select name="originalUnit" id="originalUnit">
+                                        <option value="N/A">N/A</option>
+                                        <option value="mL">mL</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <input name="ingredient" type="text" placeholder="milk" required>
+                                </div>
+                            </td>
+
+                            <td>
+                                convert to
+                                <select name="convertedUnit" id="convertedUnit">
                                     <option value="N/A">N/A</option>
                                     <option value="mL">mL</option>
                                     <option value="L">L</option>
@@ -49,39 +66,36 @@
                                     <option value="g">g</option>
                                     <option value="kg">kg</option>
                                 </select>
-                            </div>
-                        </td>
 
-                        <td>
-                            <div>
-                                <input name="ingredient" type="text" placeholder="milk" required>
-                            </div>
-                        </td>
+                            </td>
+                        </tr>
 
-                        <td>
-                            convert to
-                            <select name="convertedUnit" id="convertedUnit">
-                                <option value="N/A">N/A</option>
-                                <option value="mL">mL</option>
-                                <option value="L">L</option>
-                                <option value="oz">oz</option>
-                                <option value="g">g</option>
-                                <option value="kg">kg</option>
-                            </select>
+                        <tr>
+                            <td id="rowTag">Ingredient:</td>
 
-                        </td>
-                    </tr>
+                            <td>
+                                <input name="numberToConvert" type="number" placeholder="6">
+                            </td>
 
-                    <tr>
-                        <td id="rowTag">Ingredient:</td>
+                            <td>
+                                <div>
+                                    <select name="originalUnit" id="originalUnit">
+                                        <option value="N/A">N/A</option>
+                                        <option value="mL">mL</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </div>
+                            </td>
 
-                        <td>
-                            <input name="numberToConvert" type="number" placeholder="6">
-                        </td>
+                            <td>
+                                <div>
+                                    <input name="ingredient" type="text" placeholder="eggs">
+                                </div>
+                            </td>
 
-                        <td>
-                            <div>
-                                <select name="originalUnit" id="originalUnit">
+                            <td>
+                                convert to
+                                <select name="convertedUnit" id="convertedUnit">
                                     <option value="N/A">N/A</option>
                                     <option value="mL">mL</option>
                                     <option value="L">L</option>
@@ -89,118 +103,40 @@
                                     <option value="g">g</option>
                                     <option value="kg">kg</option>
                                 </select>
-                            </div>
-                        </td>
 
-                        <td>
-                            <div>
-                                <input name="ingredient" type="text" placeholder="eggs">
-                            </div>
-                        </td>
-
-                        <td>
-                            convert to
-                            <select name="convertedUnit" id="convertedUnit">
-                                <option value="N/A">N/A</option>
-                                <option value="mL">mL</option>
-                                <option value="L">L</option>
-                                <option value="oz">oz</option>
-                                <option value="g">g</option>
-                                <option value="kg">kg</option>
-                            </select>
-
-                        </td>
-                    </tr>
-                </table>
-
-                <div>
-                    <button class="btn btn-outline-primary add_another">Add another line</button>
-                </div>
-
-
-
-                <div>
-                    <label for="originalServing">Convert from</label>
-                    <input name="originalServing" id="originalServing" type="number" placeholder="2" required>
-
-                    <label for="currentServing">servings to</label>
-                    <input name="currentServing" id="currentServing" type="number" placeholder="1" required>
-                    <label for="currentServing">serving(s)</label>
-                </div>
-
-
-                <div>
-                    <button class="btn btn-outline-primary" type="submit">Let's cook!</button>
-                    <button class="btn btn-outline-primary" type="reset" onclick="deleteResult()">Cook another
-                        one</button>
-                </div>
-            </form>
-
-            <!--
-            <form class=" form" action="" method="get">
-                    <div>
-                        <input id="numberToConvert" type="number" placeholder="400" required>
-                    </div>
-
+                            </td>
+                        </tr>
+                    </table>
 
                     <div>
-                        <select name="unit" id="unit">
-                            <option value="mL">ml</option>
-                            <option value="L">L</option>
-
-                        </select>
+                        <button class="btn btn-outline-primary add_another">Add another line</button>
                     </div>
 
-                    <div>
-                        <input id="ingredient1" type="text" placeholder="milk" required>
-                    </div>
 
 
                     <div>
                         <label for="originalServing">Convert from</label>
-                        <input id="originalServing" type="number" placeholder="2" required>
+                        <input name="originalServing" id="originalServing" type="number" placeholder="2" required>
 
                         <label for="currentServing">servings to</label>
-                        <input id="currentServing" type="number" placeholder="1" required>
+                        <input name="currentServing" id="currentServing" type="number" placeholder="1" required>
                         <label for="currentServing">serving(s)</label>
                     </div>
 
 
                     <div>
-                        <button class="btn btn-outline-primary submit">Submit</button>
+                        <button class="btn btn-outline-primary" type="submit">Let's cook!</button>
+                        <button class="btn btn-outline-primary" type="reset" onclick="deleteResult()">Cook another
+                            one</button>
                     </div>
-
-                    <div>
-                        <label for="convertFrom">Choose a unit: </label>
-                        <select name="convertFrom" id="unit">
-                            <option value="Gallon">Gallons</option>
-                            <option value="Centiliters">Centiliters</option>
-                            <option value="Liters">Liters</option>
-                            <option value="Grams">Grams</option>
-                            <option value="Kilograms">Kilograms</option>
-                            <option value="Fahrenheit">Fahrenheit</option>
-                            <option value="Celsius">Celsius</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="convertTo">Convert to:</label>
-                        <select name="convertFrom" id="unit">
-                            <option value="Gallon">Gallon</option>
-                            <option value="Kilograms">Kilograms</option>
-                            <option value="Grams">Grams</option>
-                        </select>
-                    </div>
-
-                    </form>
+                </form>
+            </div>
+        </section>
+        <section class="col-lg-4" id="right-content">
+            <div id="resultTable">
 
             </div>
-            -->
-    </section>
-    <section>
-        <div class="container" id="resultTable">
-
-        </div>
+        </section>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

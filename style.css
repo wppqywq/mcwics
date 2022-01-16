@@ -1,0 +1,59 @@
+body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:#d0e4fe;
+}
+/*
+h1{
+    font-weight: 100;
+    text-align:center;
+}
+p{
+    font-family:"Times New Roman";
+    font-size:20px;
+    border-style:hidden;
+}
+
+#tbl{
+    background-color:rgb(253, 219, 155);
+    border-style:hidden;
+    border-collapse:separate; 
+    /*border-spacing:0px 7px;
+}
+
+#ingredient{
+    width:700px; 
+    float:left;
+}
+#resultTable{
+    width:700px; 
+    float:right;
+}
+*/
+input{
+    background-color:rgb(252, 233, 186);
+    border-style:hidden;
+    width:50px;
+}
+
+#left-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+}
+
+#right-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+}

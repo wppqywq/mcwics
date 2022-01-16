@@ -35,12 +35,9 @@ addForm.addEventListener('submit', function (e) {
 
     const rows = addForm.querySelectorAll('tr');
     const table = document.createElement('table');
+
     for (i = 0; i < rows.length; i++) {
         const row = rows[i];
-        console.log(row.querySelector('input[type="number"]').value);
-        console.log(row.querySelector('select[id="originalUnit"]').value);
-        console.log(row.querySelector('input[name="ingredient"]').value);
-        console.log(row.querySelector('select[id="convertedUnit"]').value);
 
         const preUni = row.querySelector('select[id="originalUnit"]').value;
         const targetUni = row.querySelector('select[id="convertedUnit"]').value;
@@ -51,6 +48,10 @@ addForm.addEventListener('submit', function (e) {
         quantity = convertUnit(preUni, targetUni, quantity);
 
         //convert quantity
+
+        var quantity = row.querySelector('input[type="number"]').value;
+        const ingredient = row.querySelector('input[name="ingredient"]').value;
+
         quantity = Math.round(quantity * ratio * 100) / 100;
 
         const newRow = document.createElement('tr');
@@ -67,7 +68,10 @@ addForm.addEventListener('submit', function (e) {
         table.insertAdjacentElement('beforeend', newRow);
     }
 
-    document.querySelector("#resultTable").insertAdjacentElement('afterbegin', table);
+    const outro = document.createElement('p');
+    outro.innerHTML = "Your recipe is here!"
+    document.querySelector("#resultTable").append(outro);
+    document.querySelector("#resultTable").insertAdjacentElement('beforeend', table);
 
 
 });
