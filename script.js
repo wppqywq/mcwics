@@ -10,6 +10,10 @@ const addForm = document.forms['ingredient'];
 
 addForm.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    //get ratio
+    ratio = document.getElementById("currentServing").value / document.getElementById("originalServing").value;
+
     const rows = addForm.querySelectorAll('tr');
     const table = document.createElement('table');
     for (i = 0; i < rows.length; i++) {
@@ -20,9 +24,11 @@ addForm.addEventListener('submit', function (e) {
         console.log(row.querySelector('select[id="convertedUnit"]').value);
 
 
-        const quantity = row.querySelector('input[type="number"]').value;
+        var quantity = row.querySelector('input[type="number"]').value;
         const ingredient = row.querySelector('input[name="ingredient"]').value;
 
+        quantity = quantity * ratio;
+        
         const newRow = document.createElement('tr');
         newRow.append(quantity + " " + ingredient);
         table.insertAdjacentElement('beforeend', newRow);
