@@ -19,14 +19,21 @@ function addEntry(amt, unit, name) {
     recipe.push(new IngredientEntry(amt, unit, name));
 }
 
-function buildRecipe(){
-    //const amts = document.querySelectorAll('*[id^="numberToConvert"]');
-    //const names = document.querySelectorAll('*[id^="ingredient"]');
-    const amts = document.querySelectorAll('numberToConvert');
-    const names = document.querySelectorAll('ingredient');
+const addForm = document.forms['ingredient'];
 
+addForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const rows = addForm.querySelectorAll('tr');
+    for (i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        let amt = row.querySelector('input[type="number"]').value;
+        let unit = row.querySelector('select[id="originalUnit"]').value;
+        let name = row.querySelector('input[name="ingredient"]').value;
+        //console.log(row.querySelector('select[id="convertedUnit"]').value);
+        addEntry(amt, unit, name);
+    }
 
-}
+});
 
 function convertAmt(recipe, ratio) {
     let newRecipe = [];
