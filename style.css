@@ -1,17 +1,14 @@
-* {
-    font-family: 'Open Sans', sans-serif;
-  }
-
 body{
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    background-color:#d0e4fe;
+    background-color:#bbd3f0;
 }
-/*
+
 h1{
-    font-weight: 100;
+    color: #2067ff;
+    font-weight: 300;
     text-align:center;
 }
 p{
@@ -21,12 +18,36 @@ p{
 }
 
 #tbl{
-    background-color:rgb(253, 219, 155);
+    background-color:#f08700;
     border-style:hidden;
     border-collapse:separate; 
-    /*border-spacing:0px 7px;
+    width:400px;
+    border-spacing:2px 5px;
+    margin: 6px;
 }
 
+#left-content {
+    background-color: #efca08;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+    box-shadow:10px 10px 5px #91a8b4;
+}
+
+#right-content {
+    background-color: #efca08;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+    box-shadow:10px 10px 5px #91a8b4;
+}
+/*
 #ingredient{
     width:700px; 
     float:left;
@@ -37,28 +58,9 @@ p{
 }
 */
 input{
-    background-color:rgb(252, 233, 186);
+    background-color:#f49f0a;
     border-style:hidden;
     width:50px;
-}
-
-
-#left-content {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px 30px;
-    display: flex;
-    height: 500px;
-    flex-direction: column;
-    text-align: center;
-}
-
-#right-content {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px 30px;
-    display: flex;
-    height: 500px;
-    flex-direction: column;
-    text-align: center;
+    border-spacing:1px 5px;
+    margin: 5px;
 }
