@@ -5,3 +5,27 @@ $('document').ready(function () {
 })
 
 
+//get the ratio
+var firstname1= document.getElementById("firstname").value;
+var lastname1= document.getElementById("lastname").value;
+let ratio = document.getElementById("originalServing").value / document.getElementById("originalServing").value;
+//constructor for each ingredient entry
+function IngredientEntry(amt, unit, name) {
+    this.amount = amt;
+    this.unit = unit;
+    this.name = name;
+}
+
+let recipe = [];
+
+function addEntry(amt, unit, name) {
+    recipe.push(new IngredientEntry(amt, unit, name));
+}
+
+function convertAmt(recipe, ratio) {
+    let newRecipe = [];
+    for (let i = 0; i < recipe.length; i++) {
+        newRecipe.push(new IngredientEntry(recipe[i].amt*ratio, recipe[i].unit, recipe[i].name));
+    }
+    return newRecipe;
+}
