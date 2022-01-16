@@ -4,10 +4,7 @@ $('document').ready(function () {
     });
 })
 
-
 //get the ratio
-var firstname1= document.getElementById("firstname").value;
-var lastname1= document.getElementById("lastname").value;
 let ratio = document.getElementById("originalServing").value / document.getElementById("originalServing").value;
 //constructor for each ingredient entry
 function IngredientEntry(amt, unit, name) {
@@ -20,6 +17,15 @@ let recipe = [];
 
 function addEntry(amt, unit, name) {
     recipe.push(new IngredientEntry(amt, unit, name));
+}
+
+function buildRecipe(){
+    //const amts = document.querySelectorAll('*[id^="numberToConvert"]');
+    //const names = document.querySelectorAll('*[id^="ingredient"]');
+    const amts = document.querySelectorAll('numberToConvert');
+    const names = document.querySelectorAll('ingredient');
+
+
 }
 
 function convertAmt(recipe, ratio) {
