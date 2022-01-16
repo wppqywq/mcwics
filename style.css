@@ -37,3 +37,23 @@ input{
     border-style:hidden;
     width:50px;
 }
+
+#left-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+}
+
+#right-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+}
