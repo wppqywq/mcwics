@@ -1,4 +1,3 @@
-
 * {
     font-family: 'Open Sans', sans-serif;
 }
@@ -8,56 +7,48 @@ body{
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    background-color:#bbd3f0;
+    background-color:#738cb8;
 }
 
 h1{
-    color: #2067ff;
+    color: #ff8282;
     font-weight: 300;
     text-align:center;
 }
 p{
-    /*font-family:"Times New Roman";*/
+    
     font-size:20px;
     border-style:hidden;
 }
 
 #tbl{
-    background-color:#f08700;
+    background-color:#8aa8f5;
     border-style:hidden;
     border-collapse:separate; 
-    width:400px;
+    width:450px;
     border-spacing:2px 5px;
     margin: 6px;
     border-radius: 10px;
     font-size: 14px;
 }
 
-#resultTbl{
-    border-style:hidden;
-    border-collapse:separate; 
-    width:400px;
-    border-spacing:2px 5px;
-    margin: 6px;
-    border-radius: 10px;
-    font-size: 20px;
-}
-
 #left-content {
-    background-color: #efca08;
+    background-color: #c6d5ff;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 15px 25px;
     display: flex;
+    width: 500px;
     flex-direction: column;
     text-align: center;
     box-shadow:10px 10px 5px #91a8b4;
 }
 
 #right-content {
-    background-color: #efca08;
+    background-color: #c6d5ff;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 15px 25px;
     display: flex;
+    width: 500px;
     flex-direction: column;
     text-align: center;
     box-shadow:10px 10px 5px #91a8b4;
@@ -75,10 +66,21 @@ p{
 }
 */
 input{
-    /*background-color:#f49f0a;*/
+    background-color:#ffe6f4;
     border-style:hidden;
     width:50px;
     border-spacing:1px 5px;
     margin: 5px;
     border-radius: 12px;
+}
+#resultTbl{
+    background:#ffe6f4;
+    border-style:hidden;
+    border-collapse:separate; 
+    border-spacing:2px 5px;
+    width:400px;
+    margin: 6px;
+    display:flexbox;
+    border-radius: 10px;
+    font-size: 20px;
 }
