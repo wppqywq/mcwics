@@ -48,10 +48,6 @@ addForm.addEventListener('submit', function (e) {
         quantity = convertUnit(preUni, targetUni, quantity);
 
         //convert quantity
-
-        var quantity = row.querySelector('input[type="number"]').value;
-        const ingredient = row.querySelector('input[name="ingredient"]').value;
-
         quantity = Math.round(quantity * ratio * 100) / 100;
 
         const newRow = document.createElement('tr');
