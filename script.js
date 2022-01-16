@@ -66,6 +66,7 @@ addForm.addEventListener('submit', function (e) {
 
     const outro = document.createElement('p');
     outro.innerHTML = "Your recipe is here!<br>You'll need";
+    table.setAttribute('id', "resultTbl");
     document.querySelector("#resultTable").append(outro);
     document.querySelector("#resultTable").insertAdjacentElement('beforeend', table);
 
