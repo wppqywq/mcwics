@@ -138,9 +138,6 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity * ozInMl;
             }
         case 'N/A':
-            if (preUnit != 'N/A') {
-                throw Error("Invalid unit conversion!");
-            }
             return quantity;
     }
 }
