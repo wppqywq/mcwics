@@ -4,8 +4,10 @@ $('document').ready(function () {
     });
 })
 
+
 //get the ratio
 let ratio = document.getElementById("originalServing").value / document.getElementById("originalServing").value;
+
 //constructor for each ingredient entry
 function IngredientEntry(amt, unit, name) {
     this.amount = amt;
@@ -39,6 +41,9 @@ function convertAmt(recipe, ratio) {
     let newRecipe = [];
     for (let i = 0; i < recipe.length; i++) {
         newRecipe.push(new IngredientEntry(recipe[i].amt*ratio, recipe[i].unit, recipe[i].name));
+        console.log(recipe[i].amt*ratio);
+        console.log(recipe[i].unit);
+        console.log(recipe[i].name);
     }
     return newRecipe;
 }
