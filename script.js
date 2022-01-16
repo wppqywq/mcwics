@@ -9,6 +9,7 @@ $('document').ready(function () {
         <option value="oz">oz</option>\
         <option value="g">g</option>\
         <option value="kg">kg</option>\
+        <option value="lb">lb</option>\
         </select></div></td><td>\
         <div><input name="ingredient" id="ingredient" type="text" ></div> \
         </td><td>convert to <select name="convertedUnit" id="convertedUnit">\
@@ -18,12 +19,15 @@ $('document').ready(function () {
         <option value="oz">oz</option>\
         <option value="g">g</option>\
         <option value="kg">kg</option>\
+        <option value="lb">lb</option>\
         </select></td></form></tr>');
     });
 })
 
 const ozInG = 28.35;
 const ozInMl = 29.57;
+const lbInG = 453.59;
+const lbInOz = 16;
 
 const addForm = document.forms['ingredient'];
 
@@ -77,7 +81,7 @@ function deleteResult() {
 }
 
 function convertUnit(preUnit, targetUni, quantity) {
-    let weights = ["g", "kg", "oz"];
+    let weights = ["g", "kg", "oz", "lb"];
     let volumes = ['L', 'mL', 'oz'];
 
     switch (targetUni) {
@@ -90,6 +94,8 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity * 1000;
             } else if (preUnit == 'oz') {
                 return quantity * ozInG;
+            } else if (preUnit == 'lb'){
+                return quantity * lbInG;
             }
         case 'kg':
             if (!weights.includes(preUnit)) {
@@ -100,6 +106,20 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity;
             } else if (preUnit == 'oz') {
                 return quantity * ozInG / 1000;
+            } else if(preUnit == 'lb'){
+                return quantity * lbInG / 1000;
+            }
+        case "lb":
+            if (!weights.includes(preUnit)) {
+                throw Error("Invalid unit conversion!");
+            } else if (preUnit == 'g') {
+                return quantity / lbInG;
+            } else if (preUnit == 'kg') {
+                return quantity * 1000 / lbInG;
+            } else if (preUnit == 'oz') {
+                return quantity / lbInOz;
+            } else if(preUnit == 'lb'){
+                return quantity;
             }
         case 'oz':
             if (preUnit == 'N/A') {
@@ -108,14 +128,14 @@ function convertUnit(preUnit, targetUni, quantity) {
                 return quantity / ozInG;
             } else if (preUnit == 'kg') {
                 return quantity * 1000 / ozInG;
+            } else if(preUnit == 'lb'){
+                return quantity * lbInOz;
             } else if (preUnit == 'oz') {
                 return quantity;
             } else if (preUnit == 'L') {
                 return (quantity * 1000 / ozInMl);
             } else if (preUnit == 'mL') {
                 return (quantity / ozInMl);
-            } else if (preUnit == 'oz') {
-                return quantity;
             }
         case 'L':
             if (!volumes.includes(preUnit)) {
